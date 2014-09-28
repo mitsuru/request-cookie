@@ -1,4 +1,5 @@
 var cookies = require('request/lib/cookies');
+var CoookieJar = require('tough-cookie').CookieJar;
 
 var filestore;
 cookies.jar = function(options) {
