@@ -1,13 +1,12 @@
 var cookies = require('request/lib/cookies');
 var CookieJar = require('tough-cookie').CookieJar;
+var filestore = require('tough-cookie/lib/filestore').FileCookieStore;
 
 var filestore;
-cookies.jar = function(options) {
+cookies.jar = function(store) {
 	var store;
 	var jar;
-	if (options.cookiePath) {
-		filestore = filestore || require('tough-cookie/lib/filestore');
-		store = new filestore.FileCookieStore(options.cookiePath);
+	if (store) {
 	  jar = new CookieJar(store);
 	} else {
 		jar = new CookieJar();
@@ -16,5 +15,7 @@ cookies.jar = function(options) {
 	jar._jar = jar;
 	return jar;
 }
+
+cookies.FileCookieStore = FileCookieStore;
 
 module.exports = cookies;
