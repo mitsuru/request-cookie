@@ -7,7 +7,7 @@ cookies.jar = function(options) {
 	var jar;
 	if (options.cookiePath) {
 		filestore = filestore || require('tough-cookie/lib/filestore');
-		store = new filestore.FileCookieStore(path);
+		store = new filestore.FileCookieStore(options.cookiePath);
 	  jar = new CookieJar(store);
 	} else {
 		jar = new CookieJar();
