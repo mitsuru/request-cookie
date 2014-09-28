@@ -16,6 +16,6 @@ cookies.jar = function(store) {
 	return jar;
 }
 
-cookies.FileCookieStore = FileCookieStore;
+cookies.FileCookieStore = filestore.FileCookieStore;
 
 module.exports = cookies;
