@@ -4,7 +4,6 @@ var filestore = require('tough-cookie/lib/filestore').FileCookieStore;
 
 var filestore;
 cookies.jar = function(store) {
-	var store;
 	var jar;
 	if (store) {
 	  jar = new CookieJar(store);
