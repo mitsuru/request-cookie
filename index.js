@@ -4,7 +4,7 @@ var CookieJar = require('tough-cookie').CookieJar;
 var filestore = require('tough-cookie-filestore/lib/filestore');
 
 var filestore;
-cookies.jar = function(store) {
+cookies.prototype.jar = function(store) {
 	var jar;
 	if (store) {
 	  jar = new CookieJar(store);
@@ -16,7 +16,7 @@ cookies.jar = function(store) {
 	return jar;
 }
 
-request.jar = function(store) {
+request.prototype.jar = function(store) {
 	return cookies.jar(store);
 }
 
