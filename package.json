@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "request": "~2.44.0",
-    "tough-cookie": "git://github.com/abelozerov/tough-cookie.git#feature/filestore"
+    "tough-cookie": "0.12.1",
+    "tough-cookie-filestore": "git://github.com/mitsuru/tough-cookie-filestore"
   }
 }
